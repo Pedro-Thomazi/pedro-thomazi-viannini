@@ -9,6 +9,10 @@ body {
   color: #8a1616;
 }
 
+.colorYellow {
+  color: yellow;
+}
+
 .btnDarkMode {
   position: absolute;
   top: 10px;
@@ -17,11 +21,20 @@ body {
   background-color: #fff;
   border-radius: 40px;
 
+  &.gray {
+    background-color: #2f2f2f;
+
+    label {
+      background-color: #fff;
+    }
+  }
+
   input {
     display: none;
   }
 
   label {
+    position: relative;
     display: block;
     border-radius: 50%;
     background-color: #1f1f1f;
@@ -30,6 +43,15 @@ body {
     transition: .5s;
     cursor: pointer;
     transform: translateX(-12px);
+
+    i.hide {
+      display: none;
+    }
+
+    i {
+      position: absolute;
+      transform: translate(45%, 18%);
+    }
 
     &.active {
       transform: translateX(12px);
@@ -123,7 +145,7 @@ main {
     ul {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 50px;
       list-style: none;
 
       .projeto {
@@ -131,6 +153,7 @@ main {
         width: 100%;
         gap: 10px;
         color: #fff;
+        border-bottom: 2px solid #1f1f1f;
 
         &.reverse {
           flex-direction: row-reverse;
@@ -197,6 +220,23 @@ main {
           p {
             color: #aaa;
             font-size: 1.3rem;
+          }
+
+          a {
+            display: block;
+            border-radius: 10px;
+            background-color: #8a1616;
+            color: #fff;
+            padding: 5px;
+            width: 200px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: .5s;
+
+            &:hover {
+              transform: scale(1.1);
+              box-shadow: 1px 1px 5px 1px #0000006b;
+            }
           }
         }
       }
