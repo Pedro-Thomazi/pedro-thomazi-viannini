@@ -132,6 +132,7 @@ body {
 
 main {
   background-color: #2f2f2f;
+  padding-top: 100px;
 
   p.paragApresent {
     text-indent: 40px;
@@ -240,6 +241,15 @@ main {
           }
         }
       }
+    }
+  }
+
+  .aboutMe {
+    display: flex;
+    width: 100%;
+
+    div {
+      width: 50%;
     }
   }
 
