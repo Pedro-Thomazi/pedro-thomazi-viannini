@@ -13,6 +13,9 @@
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -23,11 +26,11 @@
 <script src="js/script.js" defer></script>
 
 <style>
-  .imageMyGram{
+  .imageMyGram {
     background-image: url("./assets/images/imagemMyGram.png");
   }
 
-  .imageMyGramMenor{
+  .imageMyGramMenor {
     background-image: url("./assets/images/imagemMenorMyGram.png");
   }
 
@@ -48,6 +51,7 @@
       <i class="bi bi-moon-fill colorGray hide"></i>
     </label>
   </div>
+  <canvas id="c"></canvas>
   <header class="header container">
     <h2>Bem-vindo ao meu mundo. Me chamo Pedro!</h2>
     <div class="principalText">
@@ -75,7 +79,9 @@
           </div>
           <div class="description">
             <h3>MyGram</h3>
-            <p>Projeto MyGram é uma rede social feita para pessoas se conectarem e dividirem seus momentos uns com os outros. Aqui utilizei Node.js, React.js e MongoDB. Com esse projeto pude aprimorar meus conhecimento em autenticação de usuário, algo que tinha dificuldade.</p>
+            <p>Projeto MyGram é uma rede social feita para pessoas se conectarem e dividirem seus momentos uns com os
+              outros. Aqui utilizei Node.js, React.js e MongoDB. Com esse projeto pude aprimorar meus conhecimento em
+              autenticação de usuário, algo que tinha dificuldade.</p>
             <a href="https://github.com/Pedro-Thomazi/my-gram-V2" target="_blank">Ver Código</a>
           </div>
         </li>
@@ -86,7 +92,10 @@
           </div>
           <div class="description">
             <h3>RentHub</h3>
-            <p>Projeto RentHub é um site de reserva e anúncio de imóveis. Usuários podem encontrar casas, hotéis ou apartamentos em todo o Brasil. Ainda está em desenvolvimento. Aqui utilizei Java (Spring Boot), React.js e MySQL. Com esse projeto pude aprimorar meus conhecimento Java, mais especificamente em Spring Security, permitindo e bloqueando determinadas ações dos usuários.</p>
+            <p>Projeto RentHub é um site de reserva e anúncio de imóveis. Usuários podem encontrar casas, hotéis ou
+              apartamentos em todo o Brasil. Ainda está em desenvolvimento. Aqui utilizei Java (Spring Boot), React.js e
+              MySQL. Com esse projeto pude aprimorar meus conhecimento Java, mais especificamente em Spring Security,
+              permitindo e bloqueando determinadas ações dos usuários.</p>
             <a href="https://github.com/Pedro-Thomazi/RentHub" target="_blank">Ver Código</a>
           </div>
         </li>
@@ -97,8 +106,10 @@
           </div>
           <div class="description">
             <h3>MyGram</h3>
-            <p>Projeto MyGram é uma rede social feita para pessoas se conectarem e dividirem seus momentos uns com os outros. Aqui utilizei Node.js, React.js e MongoDB. Com esse projeto pude aprimorar meus conhecimento em autenticação de usuário, algo que tinha dificuldade.</p>
-            <a >Ver Código</a>
+            <p>Projeto MyGram é uma rede social feita para pessoas se conectarem e dividirem seus momentos uns com os
+              outros. Aqui utilizei Node.js, React.js e MongoDB. Com esse projeto pude aprimorar meus conhecimento em
+              autenticação de usuário, algo que tinha dificuldade.</p>
+            <a>Ver Código</a>
           </div>
         </li>
       </ul>
@@ -106,10 +117,27 @@
 
     <section class="aboutMe container">
       <div class="divImage">
-        <img src="/" alt="Minha Foto?">
+        <img src="./assets/images/minhaFotoBased.png" alt="Minha Foto?">
       </div>
       <div class="description">
-        <p class="paragApresent">Focado na criação de aplicações de alto valor e impacto social. Dedicado, organizado e sempre buscando aprimorar minhas habilidades, compartilhando conhecimento e colaborando com aqueles ao meu redor para entregar projetos de alta qualidade.</p>
+        <h1>Sobre</h1>
+        <p class="paragApresent">Desenvolvedor Full-stack focado na criação de aplicações de alto valor e impacto
+          social. Dedicado, organizado e sempre buscando aprimorar minhas habilidades, compartilhando conhecimento e
+          colaborando com aqueles ao meu redor para entregar projetos de alta qualidade.</p>
+        <div class="minhasStacks">
+          <i class="fa-brands fa-java"></i>
+          <i class="fa-brands fa-node-js"></i>
+          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-python"></i>
+          <i class="fa-solid fa-database"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+        </div>
+        <p class="paragApresent">
+          Começei a programa em 2019, como uma forma de hobbie, pouco tempo depois descobri que seria mais do que isso. Atualmente estou cursando Análise e desenvolvimento de sistemas na FIAP.
+        </p>
       </div>
     </section>
   </main>

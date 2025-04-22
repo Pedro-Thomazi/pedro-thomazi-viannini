@@ -5,6 +5,15 @@ body {
   background-color: #1f1f1f;
 }
 
+#c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+}
+
 .colorRed {
   color: #8a1616;
 }
@@ -131,15 +140,8 @@ body {
 }
 
 main {
-  background-color: #2f2f2f;
+  background: linear-gradient(to bottom, #000, #2f2f2f);
   padding-top: 100px;
-
-  p.paragApresent {
-    text-indent: 40px;
-    color: #777;
-    font-size: 1.5rem;
-    width: 600px;
-  }
 
   .projects {
 
@@ -250,6 +252,81 @@ main {
 
     div {
       width: 50%;
+
+      img {
+        width: 450px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        box-shadow: 0px 0px 5px 5px #0e06067c;
+        transition: .5s;
+        
+        &:hover {
+          box-shadow: 0px 0px 5px 5px #8a16167c;
+          border-color: #8a1616;
+        }
+      }
+
+      &.description {
+        h1 {
+          text-align: center;
+          color: #aaa;
+          font-size: 5rem;
+          padding-bottom: 30px;
+          font-weight: 300;
+        }
+
+        p.paragApresent {
+          color: #777;
+          font-size: 1.5rem;
+          width: 600px;
+        }
+
+        .minhasStacks {
+          display: flex;
+          gap: 10px;
+          padding: 20px 0;
+
+          i {
+            font-size: 3rem;
+
+            &.fa-java {
+              color: red;
+            }
+
+            &.fa-node-js {
+              color: rgb(0, 163, 27);
+            }
+
+            &.fa-react {
+              color: rgb(0, 174, 255);
+            }
+
+            &.fa-js {
+              color: rgb(255, 251, 0);
+            }
+
+            &.fa-python {
+              color: rgb(0, 110, 255);
+            }
+
+            &.fa-database {
+              color: rgb(104, 104, 104);
+            }
+
+            &.fa-github {
+              color: rgb(119, 119, 119);
+            }
+
+            &.fa-html5 {
+              color: rgb(255, 60, 0);
+            }
+
+            &.fa-css3-alt {
+              color: rgb(0, 132, 255);
+            }
+          }
+        }
+      }
     }
   }
 
