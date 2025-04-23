@@ -79,6 +79,10 @@ body {
   align-content: center;
   font-family: "Oswald", sans-serif;
 
+  .principalText {
+    /* background-color: red; */
+  }
+
   h2 {
     color: #777;
     height: 5px;
@@ -96,12 +100,18 @@ body {
       display: flex;
       align-items: center;
       gap: 10px;
+      animation: appearHeaderFirst 1s;
+      /* animation-timeline: view();
+      animation-range: entry 0% cover 40%; */
+      transition: .5s;
     }
 
     &.textDiferente {
       text-align: end;
       margin-right: 100px;
       transform: translateY(-20%);
+      animation: appearHeaderSecondy 1s;
+      transition: .5s;
     }
 
     a {
@@ -186,7 +196,7 @@ main {
               width: 350px;
               height: 200px;
             }
-            
+
             &.phoneContainer {
               /* background-image: url("../assets/images/imagemMenorMyGram.png"); */
               background-size: cover;
@@ -225,6 +235,47 @@ main {
             font-size: 1.3rem;
           }
 
+
+          .tecnologias {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+
+            span {
+              color: #fff;
+              padding: 2px 5px;
+              border-radius: 5px;
+
+              &.node {
+                background-color: #008000;
+              }
+
+              &.java,
+              &.html {
+                background-color: #bb7103;
+              }
+
+              &.react,
+              &.css {
+                background-color: #007180;
+              }
+
+              &.mongo {
+                background-color: #19940e;
+              }
+
+              &.sql,
+              &.figma {
+                background-color: #0e5394;
+              }
+
+              &.sass {
+                background-color: #800080;
+              }
+            }
+          }
+
           a {
             display: block;
             border-radius: 10px;
@@ -259,7 +310,7 @@ main {
         border: 2px solid transparent;
         box-shadow: 0px 0px 5px 5px #0e06067c;
         transition: .5s;
-        
+
         &:hover {
           box-shadow: 0px 0px 5px 5px #8a16167c;
           border-color: #8a1616;
@@ -330,4 +381,182 @@ main {
     }
   }
 
+}
+
+.footer {
+  display: flex;
+  padding: 100px;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      color: #aaa;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #aaa;
+
+      i {
+        margin-right: 10px;
+      }
+
+
+    }
+  }
+}
+
+
+/* White Mode */
+body.whiteMode {
+  background-color: #9f9f9f;
+
+  .header {
+    h2 {
+      color: #444;
+      height: 5px;
+    }
+
+    h1 {
+      color: #333;
+    }
+  }
+
+  main {
+    background: linear-gradient(to bottom, #ffffff, #afafaf);
+
+    .projects {
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        list-style: none;
+
+        .projeto {
+          display: flex;
+          width: 100%;
+          gap: 10px;
+          color: #fff;
+          border-bottom: 2px solid #1f1f1f;
+
+          .description {
+            width: 50%;
+
+            h3 {
+              background-color: #1f1f1f;
+              padding: 10px;
+              border-radius: 5px;
+              font-size: 2.8rem;
+              font-weight: 300;
+            }
+
+            p {
+              color: #111;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .aboutMe {
+      div {
+        &.description {
+          h1 {
+            color: #111;
+          }
+
+          p.paragApresent {
+            color: #222;
+          }
+
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #bbb;
+
+    div {
+
+      h2 {
+        color: #111;
+      }
+
+      p {
+        color: #111;
+      }
+    }
+  }
+}
+
+/* Scroll Animation */
+.scrollAnimation {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.scrollAnimationLeft {
+  animation: appearLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: .5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes appearLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes appearHeaderFirst {
+  from {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes appearHeaderSecondy {
+  from {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-20%);
+  }
 }

@@ -1,3 +1,4 @@
+const bodyPage = document.querySelector("body")
 const containerDarkMode = document.querySelector(".btnDarkMode")
 const labelDM = document.querySelector(".labelDM")
 const colorYellow = document.querySelector(".colorYellow")
@@ -12,6 +13,7 @@ labelDM.addEventListener("click", () => {
   containerDarkMode.classList.toggle("gray")
   colorYellow.classList.toggle("hide")
   colorGray.classList.toggle("hide")
+  bodyPage.classList.toggle("whiteMode")
 
   if (!inputCheck.checked) {
     colorMode = "#0f0"

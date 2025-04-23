@@ -41,6 +41,23 @@
   .imageMenorRenthub {
     background-image: url("assets/images/imageMenorRenthub.png");
   }
+
+  .imageMercadoJavai {
+    background-image: url("assets/images/mercadoJavai.webp");
+  }
+
+  .imageMenorMercadoJavai {
+    background-image: url("assets/images/mercadoJavai.webp");
+  }
+
+  .imageEmConstrucao {
+    background-image: url("assets/images/projetoFintech.png");
+  }
+
+  .imageMenorEmConstrucao {
+    background-image: url("assets/images/projetoFintech.png");
+    background-position: center;
+  }
 </style>
 
 <body>
@@ -72,7 +89,7 @@
   <main>
     <section class="projects container">
       <ul>
-        <li class="projeto">
+        <li class="projeto scrollAnimationLeft">
           <div class="containerImgs">
             <span class="tabletContainer imageMyGram"></span>
             <span class="phoneContainer imageMyGramMenor"><label></label></span>
@@ -82,10 +99,16 @@
             <p>Projeto MyGram é uma rede social feita para pessoas se conectarem e dividirem seus momentos uns com os
               outros. Aqui utilizei Node.js, React.js e MongoDB. Com esse projeto pude aprimorar meus conhecimento em
               autenticação de usuário, algo que tinha dificuldade.</p>
+              <div class="tecnologias">
+                <span class="node">Node.js</span>
+                <span class="react">React.js</span>
+                <span class="mongo">MongoDB</span>
+                <span class="sass">SASS/SCSS</span>
+              </div>
             <a href="https://github.com/Pedro-Thomazi/my-gram-V2" target="_blank">Ver Código</a>
           </div>
         </li>
-        <li class="projeto reverse">
+        <li class="projeto reverse scrollAnimation">
           <div class="containerImgs">
             <span class="tabletContainer imageRenthub"></span>
             <span class="phoneContainer imageMenorRenthub"><label></label></span>
@@ -96,26 +119,56 @@
               apartamentos em todo o Brasil. Ainda está em desenvolvimento. Aqui utilizei Java (Spring Boot), React.js e
               MySQL. Com esse projeto pude aprimorar meus conhecimento Java, mais especificamente em Spring Security,
               permitindo e bloqueando determinadas ações dos usuários.</p>
+              <div class="tecnologias">
+                <span class="java">Java</span>
+                <span class="react">React.js</span>
+                <span class="sql">MySQL</span>
+                <span class="sass">SASS/SCSS</span>
+              </div>
             <a href="https://github.com/Pedro-Thomazi/RentHub" target="_blank">Ver Código</a>
           </div>
         </li>
-        <li class="projeto">
+        <li class="projeto scrollAnimationLeft">
           <div class="containerImgs">
-            <span class="tabletContainer"></span>
-            <span class="phoneContainer"><label></label></span>
+            <span class="tabletContainer imageMercadoJavai"></span>
+            <span class="phoneContainer imageMenorMercadoJavai"><label></label></span>
           </div>
           <div class="description">
-            <h3>MyGram</h3>
-            <p>Projeto MyGram é uma rede social feita para pessoas se conectarem e dividirem seus momentos uns com os
-              outros. Aqui utilizei Node.js, React.js e MongoDB. Com esse projeto pude aprimorar meus conhecimento em
-              autenticação de usuário, algo que tinha dificuldade.</p>
-            <a>Ver Código</a>
+            <h3>Mercado Javai</h3>
+            <p>O Mercado Javai ainda está em construção, por enquanto apenas o back-end está sendo construido. Aqui
+              utilizei Java (Spring Boot) 'por isso o nome Javai' e MySQL. Esse projetos foi um dos maiores aprendizados
+              que tive, como a criação e autenticação de usuário, criação de token, criptografia de senha e filtro de
+              segurança.</p>
+              <div class="tecnologias">
+                <span class="java">Java</span>
+                <span class="sql">MySQL</span>
+              </div>
+            <a href="https://github.com/Pedro-Thomazi/BACKEND_mercado_com_Java" target="_blank">Ver Código</a>
+          </div>
+        </li>
+        <li class="projeto reverse scrollAnimation">
+          <div class="containerImgs">
+            <span class="tabletContainer imageEmConstrucao"></span>
+            <span class="phoneContainer imageMenorEmConstrucao"><label></label></span>
+          </div>
+          <div class="description">
+            <h3>Projeto Fintech</h3>
+            <p>O objetivo desse projeto é desenvolver um aplicativo para ajudar pessoas a terem uma educação financeira
+              melhor, dizendo seus gastos, investimentos e objetivos. No momento o projeto está no início, tendo seu
+              design sendo contruído no Figma. Este projeto é ideia da minha faculdade.</p>
+              <div class="tecnologias">
+                <span class="html">HTML</span>
+                <span class="css">CSS</span>
+                <span class="figma">Figma</span>
+                <span class="sql">MySQL</span>
+              </div>
+            <a>Em Construção</a>
           </div>
         </li>
       </ul>
     </section>
 
-    <section class="aboutMe container">
+    <section class="aboutMe container scrollAnimation">
       <div class="divImage">
         <img src="./assets/images/minhaFotoBased.png" alt="Minha Foto?">
       </div>
@@ -136,11 +189,20 @@
           <i class="fa-brands fa-css3-alt"></i>
         </div>
         <p class="paragApresent">
-          Começei a programa em 2019, como uma forma de hobbie, pouco tempo depois descobri que seria mais do que isso. Atualmente estou cursando Análise e desenvolvimento de sistemas na FIAP.
+          Começei a programa em 2019, como uma forma de hobbie, pouco tempo depois descobri que seria mais do que isso.
+          Atualmente estou cursando Análise e desenvolvimento de sistemas na FIAP.
         </p>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div>
+      <h2>Entre em Contato</h2>
+      <p><i class="bi bi-geo-alt-fill"></i>São Paulo</p>
+      <p class="email"><i class="bi bi-envelope-fill"></i>pedro.thomazi@hotmail.com</p>
+    </div>
+  </footer>
 </body>
 
 </html>
