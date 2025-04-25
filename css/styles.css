@@ -69,7 +69,54 @@ body {
 }
 
 .navbar {
-  
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100px;
+    padding: 7px 9px 2px 9px;
+    background-color: #00000070;
+    border-radius: 5px;
+
+    a {
+      text-decoration: none;
+      color: #aaa;
+      font-weight: 500;
+
+
+      span {
+        color: #8a1616;
+      }
+    }
+
+    span.line {
+      display: block;
+      background-color: #8a1616;
+      width: 1%;
+      opacity: 0;
+      height: 2px;
+      transition: .5s;
+    }
+
+    &:hover span.line {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  &.column {
+    flex-direction: column;
+
+    div {
+    }
+  }
 }
 
 .header {
@@ -82,10 +129,6 @@ body {
 
   align-content: center;
   font-family: "Oswald", sans-serif;
-
-  .principalText {
-    /* background-color: red; */
-  }
 
   h2 {
     color: #777;
@@ -345,12 +388,10 @@ main {
           width: 100%;
           height: var(--height);
           overflow: hidden;
-          mask-image: linear-gradient(
-            to right,
-            transparent,
-            #000 10% 90%,
-            transparent
-          );
+          mask-image: linear-gradient(to right,
+              transparent,
+              #000 10% 90%,
+              transparent);
 
           .minhasStacks {
             display: flex;
@@ -451,6 +492,15 @@ main {
 body.whiteMode {
   background-color: #9f9f9f;
 
+  .navbar {  
+    div {  
+      a {
+        color: #000;
+      }
+    }
+  
+  }
+
   .header {
     h2 {
       color: #444;
@@ -464,6 +514,10 @@ body.whiteMode {
 
   main {
     background: linear-gradient(to bottom, #ffffff, #afafaf);
+
+    h1.title {
+      color: #333;
+    }
 
     .projects {
 
@@ -503,10 +557,6 @@ body.whiteMode {
     .aboutMe {
       div {
         &.description {
-          h1 {
-            color: #111;
-          }
-
           p.paragApresent {
             color: #222;
           }
@@ -597,6 +647,7 @@ body.whiteMode {
   from {
     left: 100%;
   }
+
   to {
     left: calc(var(--width) * -1);
   }

@@ -1,4 +1,5 @@
 const bodyPage = document.querySelector("body")
+const navbar = document.querySelector(".navbar")
 const containerDarkMode = document.querySelector(".btnDarkMode")
 const labelDM = document.querySelector(".labelDM")
 const colorYellow = document.querySelector(".colorYellow")
@@ -22,6 +23,15 @@ labelDM.addEventListener("click", () => {
   else {
     colorMode = "#f00"
     backcolorMode = "rgba(0, 0, 0, 0.16)"
+  }
+})
+
+// Ações no Scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= window.innerHeight) {
+    navbar.classList.add("column")
+  } else {
+    navbar.classList.remove("column")
   }
 })
 
