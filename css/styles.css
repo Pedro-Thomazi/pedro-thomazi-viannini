@@ -114,8 +114,7 @@ body {
   &.column {
     flex-direction: column;
 
-    div {
-    }
+    div {}
   }
 }
 
@@ -492,13 +491,13 @@ main {
 body.whiteMode {
   background-color: #9f9f9f;
 
-  .navbar {  
-    div {  
+  .navbar {
+    div {
       a {
         color: #000;
       }
     }
-  
+
   }
 
   .header {
@@ -650,5 +649,41 @@ body.whiteMode {
 
   to {
     left: calc(var(--width) * -1);
+  }
+}
+
+
+
+/* Média */
+@media (max-width: 1024px) {
+  main {
+    .aboutMe {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    h2 {
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 6rem;
+    }
+
   }
 }
