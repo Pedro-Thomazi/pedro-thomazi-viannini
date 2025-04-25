@@ -68,6 +68,10 @@ body {
   }
 }
 
+.navbar {
+  
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -153,7 +157,20 @@ main {
   background: linear-gradient(to bottom, #000, #2f2f2f);
   padding-top: 100px;
 
+  h1.title {
+    text-align: center;
+    color: #aaa;
+    font-size: 5rem;
+    padding-bottom: 30px;
+    font-weight: 300;
+  }
+
   .projects {
+    margin-top: 20px;
+
+    h1.title {
+      text-align: start;
+    }
 
     ul {
       display: flex;
@@ -318,14 +335,6 @@ main {
       }
 
       &.description {
-        h1 {
-          text-align: center;
-          color: #aaa;
-          font-size: 5rem;
-          padding-bottom: 30px;
-          font-weight: 300;
-        }
-
         p.paragApresent {
           color: #777;
           font-size: 1.5rem;
