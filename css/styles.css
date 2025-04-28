@@ -472,17 +472,47 @@ main {
       color: #aaa;
     }
 
-    p {
+    p, a {
       margin: 0;
       font-size: 1.5rem;
       color: #aaa;
+      text-decoration: none;
 
       i {
         margin-right: 10px;
       }
 
-
     }
+
+    a {
+      transform: translateY(-80%);
+      transition: .5s;
+    }
+
+    .email {
+      cursor: copy;
+    }
+
+    span {
+      color: #8a1616;
+      font-size: 2rem;
+      padding: 5px;
+      width: 350px;
+      background-color: #0f0f0f;
+      border: 1px solid #8a1616;
+      border-radius: 5px;
+      margin: 10px 0;
+      height: 1%;
+      opacity: 0;
+      overflow: hidden;
+      transition: .5s;
+      
+      &.open {
+        opacity: 1;
+        height: 100%;
+      }
+    }
+
   }
 }
 
@@ -574,7 +604,7 @@ body.whiteMode {
         color: #111;
       }
 
-      p {
+      p, a {
         color: #111;
       }
     }

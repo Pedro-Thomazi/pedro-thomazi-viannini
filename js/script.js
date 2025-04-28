@@ -5,6 +5,9 @@ const labelDM = document.querySelector(".labelDM")
 const colorYellow = document.querySelector(".colorYellow")
 const colorGray = document.querySelector(".colorGray")
 const inputCheck = document.querySelector("#darkMode")
+const alertCopyEmail = document.querySelector("#alertCopyEmail")
+const footerLink = document.querySelector("#footerLink")
+const email = document.querySelector(".email")
 
 let colorMode = "#f00"
 let backcolorMode = "rgba(0, 0, 0, 0.16)"
@@ -25,6 +28,22 @@ labelDM.addEventListener("click", () => {
     backcolorMode = "rgba(0, 0, 0, 0.16)"
   }
 })
+
+
+// Função click email
+email.addEventListener("click", () => {
+  const myEmail = 'pedro.thomazi@hotmail.com'
+  navigator.clipboard.writeText(myEmail)
+  footerLink.style.transform = "translateY(0%)"
+  alertCopyEmail.classList.add("open")
+  
+  setTimeout(() => {
+    alertCopyEmail.classList.remove("open")
+    footerLink.style.transform = "translateY(-80%)"
+  }, 5000)
+})
+
+
 
 // Ações no Scroll
 window.addEventListener("scroll", () => {
