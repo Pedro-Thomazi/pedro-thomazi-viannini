@@ -219,6 +219,7 @@ main {
       flex-wrap: wrap;
       gap: 50px;
       list-style: none;
+      padding: 0;
 
       .projeto {
         display: flex;
@@ -728,35 +729,35 @@ body.whiteMode {
   main {
     .projects {
       margin-top: 20px;
-  
+
       h1.title {
         text-align: start;
       }
-  
+
       ul {
         display: flex;
         flex-wrap: wrap;
         gap: 50px;
         list-style: none;
-  
+
         .projeto {
           display: flex;
           width: 100%;
           gap: 10px;
           color: #fff;
           border-bottom: 2px solid #1f1f1f;
-  
+
           &.reverse {
             flex-direction: row-reverse;
           }
-  
+
           .containerImgs {
 
             span {
               position: absolute;
               top: 50%;
               left: 25%;
-  
+
               &.tabletContainer {
                 display: none;
               }
@@ -769,7 +770,102 @@ body.whiteMode {
 
   .footer {
     div {
-      width: 100%;  
+      width: 100%;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100px;
+      border-radius: 5px;
+    }
+
+  }
+
+  .header {
+    h2 {
+      font-size: 1.2rem;
+      /* margin-bottom: 60px; */
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+  }
+
+  main {
+    .aboutMe {
+      div {
+        img {
+          width: 350px;
+        }
+
+        &.description {
+          p.paragApresent {
+            width: 100%;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .projects {
+      width: 100%;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        list-style: none;
+
+        .projeto {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+          color: #fff;
+          border-bottom: 2px solid #1f1f1f;
+          padding-bottom: 20px;
+
+          &.reverse {
+            flex-direction: column;
+          }
+
+          .containerImgs {
+            position: relative;
+
+            span {
+
+              &.tabletContainer {
+                display: block;
+              }
+
+              &.phoneContainer {
+                display: none;
+              }
+            }
+          }
+
+          .description {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 10px;
   }
 }
