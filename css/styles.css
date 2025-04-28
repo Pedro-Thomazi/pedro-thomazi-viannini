@@ -27,7 +27,7 @@ body {
   top: 10px;
   right: 10px;
   padding: 1px 15px;
-  background-color: #fff;
+  background-color: #999;
   border-radius: 40px;
 
   &.gray {
@@ -226,6 +226,7 @@ main {
         gap: 10px;
         color: #fff;
         border-bottom: 2px solid #1f1f1f;
+        padding-bottom: 20px;
 
         &.reverse {
           flex-direction: row-reverse;
@@ -472,7 +473,8 @@ main {
       color: #aaa;
     }
 
-    p, a {
+    p,
+    a {
       margin: 0;
       font-size: 1.5rem;
       color: #aaa;
@@ -506,7 +508,7 @@ main {
       opacity: 0;
       overflow: hidden;
       transition: .5s;
-      
+
       &.open {
         opacity: 1;
         height: 100%;
@@ -524,7 +526,7 @@ body.whiteMode {
   .navbar {
     div {
       a {
-        color: #000;
+        color: #eee;
       }
     }
 
@@ -534,6 +536,10 @@ body.whiteMode {
     h2 {
       color: #444;
       height: 5px;
+    }
+
+    .githubLink {
+      color: #333;
     }
 
     h1 {
@@ -604,7 +610,8 @@ body.whiteMode {
         color: #111;
       }
 
-      p, a {
+      p,
+      a {
         color: #111;
       }
     }
@@ -711,9 +718,58 @@ body.whiteMode {
     h2 {
       margin-bottom: 20px;
     }
+
     h1 {
       font-size: 6rem;
     }
 
+  }
+
+  main {
+    .projects {
+      margin-top: 20px;
+  
+      h1.title {
+        text-align: start;
+      }
+  
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        list-style: none;
+  
+        .projeto {
+          display: flex;
+          width: 100%;
+          gap: 10px;
+          color: #fff;
+          border-bottom: 2px solid #1f1f1f;
+  
+          &.reverse {
+            flex-direction: row-reverse;
+          }
+  
+          .containerImgs {
+
+            span {
+              position: absolute;
+              top: 50%;
+              left: 25%;
+  
+              &.tabletContainer {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    div {
+      width: 100%;  
+    }
   }
 }
